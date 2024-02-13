@@ -1,0 +1,15 @@
+/*System.out.println("pais " + (i+1) + Paises[i]);
+  static
+    */
+}    
+}
+
+//Promedio en Columna 
+/*static public PromColumna(int  int){
+ 
+for (i =0; i <  promedio.length;i++ ){
+
+
+}
+
+}*/
