@@ -45,7 +45,9 @@ ID_Factura int,
 
  Comprador VARCHAR(50),
 
- Contraseña varchar(50)
+ Contraseña varchar(50),
+ 
+ PRIMARY KEY(ID_Factura)
  );
 
 CREATE TABLE Clientes(
@@ -64,5 +66,31 @@ CREATE TABLE Clientes(
  
  Correo VARCHAR(20),
 
-Estado ENUM('FIAO', 'DEBE','PAGO COMPLETO') 
+ Estado enum('FIAO', 'DEBE'),  
+ 
+ PRIMARY KEY (ID_Clientes)
+
+
 );
+
+CREATE TABLE Proveedor(
+
+ID_Proveedor INT,
+
+Codigo VARCHAR(50),
+
+Nom_Proveedor VARCHAR(50),
+
+Num_Fax VARCHAR(50),
+
+Tipo_Telefono VARCHAR(50),
+
+Proveedor VARCHAR(50)
+);
+
+/*CREATE TABLE Usuario(
+ID_Usuario int,
+ Usuario VARCHAR(59)
+ Contraseña
+);*/
+
