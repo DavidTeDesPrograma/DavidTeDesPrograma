@@ -48,3 +48,16 @@ INSERT INTO Dueños WHERE('','','','')
 INSERT INTO Dueños WHERE('','','','') 
 INSERT INTO Dueños WHERE('','','','') 
 INSERT INTO Dueños WHERE('','','','') 
+
+-- Consulta para hacer coincidir las arriendas con sus arrendatarios y propietarios
+SELECT 
+    A.Nombre AS Nombre_Arrendatario,
+    P.Nombre AS Nombre_Propietario,
+    C.Direccion,
+    Ar.FechaInicio,
+    Ar.FechaFin
+FROM 
+    Arriendas Ar
+JOIN Arrendatarios A ON Ar.ID_Arrendatario = A.ID_Arrendatario
+JOIN Casas C ON Ar.ID_Casa = C.ID_Casa
+JOIN Propietarios P ON C.ID_Propietario = P.ID_Propietario;
